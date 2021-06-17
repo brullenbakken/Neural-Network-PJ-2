@@ -40,7 +40,7 @@ def sigmoid_prime(z):
 
 
 # Read data and start network.
-df = pd.read_csv("distributions.csv", delimiter="\t")
+df = pd.read_csv("data/distributions.csv", delimiter="\t")
 data_origineel = df.to_records(index=False)
 
 data = []
@@ -50,7 +50,7 @@ for row in data_origineel:
     outp = row1[-1]
     data.append((np.transpose([inp]), outp))
 
-df = pd.read_csv("validation.csv", delimiter="\t")
+df = pd.read_csv("data/validation.csv", delimiter="\t")
 data_origineel_v = df.to_records(index=False)
 
 data_v = []
